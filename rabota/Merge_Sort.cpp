@@ -36,6 +36,19 @@ void merge(vector<int>& arr, int l, int m, int r) {
         arr[k++] = R[j++];
 }
 
+// Тестовая функция
+int main() {
+    vector<int> arr = {38, 27, 43, 3, 9, 82, 10};
+    cout << "Исходный массив:\n";
+    for (auto& el : arr) cout << el << " "; cout << "\n";
+
+    mergeSort(arr, 0, arr.size()-1);
+
+    cout << "Отсортированный массив:\n";
+    for (auto& el : arr) cout << el << " "; cout << "\n";
+    return 0;
+}
+
 // Функция для сортировки слиянием
 void mergeSort(vector<int>& arr, int l, int r) {
     if (l < r) {
